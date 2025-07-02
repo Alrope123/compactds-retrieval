@@ -1,0 +1,16 @@
+name: scaling
+dependencies:
+  - python=3.11
+  - pytorch::faiss-gpu=1.8.0
+  - pip
+  - pip:
+    - omegaconf
+    - hydra-core
+    - tqdm
+    - transformers
+    - sentence_transformers
+    - pyserini
+    - datasketch
+    - boto3
+    - smart_open
+    - s3fs

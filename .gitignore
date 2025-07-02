@@ -1,0 +1,10 @@
+raw_data/
+scaling_out/
+*.log
+*pycache*
+outputs/
+*.pkl
+lm_eval.egg-info/
+*.jsonl
+*.txt
+internal/
