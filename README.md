@@ -3,7 +3,7 @@
 
 This repository contains the codes for building and obtaining the retrieval results from the datastore in [Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks](TODO).
 
-Refer to [Private-Retrieval](TODO) for running evaluations using the retrieval results.
+Refer to [compactds-eval](TODO) for running evaluations using the retrieval results.
 
 ### Citation
 ```
