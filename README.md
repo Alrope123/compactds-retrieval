@@ -1,13 +1,18 @@
 # CompactDS
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-red.svg)](#python)
 
-This repository contains the codes for building and obtaining the retrieval results from the datastore in [Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks](TODO).
+This repository contains the codes for building and obtaining the retrieval results from the datastore in [Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks](http://arxiv.org/abs/2507.01297).
 
 Refer to [compactds-eval](TODO) for running evaluations using the retrieval results.
 
 ### Citation
 ```
-TODO
+@article{lyu2025compactds,
+  title={Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks},
+  author={Xinxi Lyu and Michael Duan and Rulin Shao and Pang Wei Koh and Sewon Min}
+  journal={arXiv preprint arXiv:2507.01297},
+  year={2025}
+}
 ```
 
 ### Announcement
