@@ -3,7 +3,7 @@
 
 This repository contains the codes for building and obtaining the retrieval results from the datastore in [Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks](http://arxiv.org/abs/2507.01297).
 
-Refer to [compactds-eval](TODO) for running evaluations using the retrieval results.
+Refer to [compactds-eval](https://github.com/michaelduan8/compactds-eval) for running evaluations using the retrieval results.
 
 ### Citation
 ```
