@@ -16,7 +16,7 @@ Refer to [compactds-eval](https://github.com/michaelduan8/compactds-eval) for ru
 ```
 
 ### Announcement
-** 07/01/25**: We officially relase the index and the code for CompactDS.
+**07/01/25**: We officially relase the index and the code for CompactDS.
 
 ## Installation
 To create a conda environment `scaling` with Python 3.11:
