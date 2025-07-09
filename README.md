@@ -21,7 +21,7 @@ Refer to [compactds-eval](https://github.com/michaelduan8/compactds-eval) for ru
 ## Installation
 To create a conda environment `scaling` with Python 3.11:
 ```python
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate scaling
 huggingface-cli login --token <your_hf_token> # ignore if use custom data
 ```
