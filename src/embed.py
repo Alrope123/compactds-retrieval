@@ -223,8 +223,8 @@ def get_file_paths_and_sizes(args):
 def get_file_partitions(args):
     file_paths,_ = get_file_paths_and_sizes(args)
 
-    rank = int(os.environ.get("BEAKER_REPLICA_RANK"))
-    world_size = int(os.environ.get("BEAKER_REPLICA_COUNT"))
+    rank = int(os.environ.get("BEAKER_REPLICA_RANK", "0"))
+    world_size = int(os.environ.get("BEAKER_REPLICA_COUNT", "1"))
     
     print (f"Distributing {len(file_paths)} files into world_size={world_size}")
 
