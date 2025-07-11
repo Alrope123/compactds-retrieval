@@ -51,6 +51,7 @@ python scripts/download_queries.py --output_path queries
 python -m src.main_ric \
     --config-name CompactDS \
     tasks.eval.search=true \
+    datastore.embedding.embedding_dir=datastores/compactds/embeddings \
     datastore.embedding.passages_dir=datastores/compactds/passages \
     tasks.eval.task_name=lm-eval \ # Optional
     evaluation.data.eval_data=queries/mmlu_pro.jsonl \ # Optional 
