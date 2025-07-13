@@ -49,7 +49,7 @@ def embed_queries(args, queries, model, tokenizer, model_name_or_path, cached_em
         embeddings, batch_question = [], []
 
         with torch.no_grad():
-            for k, q in tqdm(enumerate(queries)):
+            for k, q in enumerate(tqdm(queries)):
                 if args.lowercase:
                     q = q.lower()
                 if args.normalize_text:
@@ -97,7 +97,7 @@ def embed_queries(args, queries, model, tokenizer, model_name_or_path, cached_em
         embeddings, batch_question = [], []
         with torch.no_grad():
 
-            for k, q in tqdm(enumerate(queries)):
+            for k, q in enumerate(tqdm(queries)):
                 if args.lowercase:
                     q = q.lower()
                 if args.normalize_text:
