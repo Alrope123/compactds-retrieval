@@ -126,7 +126,6 @@ def embed_queries(args, queries, model, tokenizer, model_name_or_path, cached_em
     
     print(f"Questions embeddings shape: {embeddings.shape}")
     for query, embedding in zip(queries, embeddings):
-        assert query not in cached_embeddings, f"Query {query} already exists in cached embeddings!"
         cached_embeddings[query] = embedding
 
     if args.get('update_exact_embedding_cache', True):
