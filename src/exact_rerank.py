@@ -129,7 +129,7 @@ def embed_queries(args, queries, model, tokenizer, model_name_or_path, cached_em
         cached_embeddings[query] = embedding
 
     if args.get('update_exact_embedding_cache', True):
-        with open(args.get(exact_embedding_cache_path, 'cache'), 'wb') as fout:
+        with open(args.get("exact_embedding_cache_path", 'cache'), 'wb') as fout:
             pkl.dump(cached_embeddings, fout)
 
     return cached_embeddings
