@@ -129,7 +129,7 @@ def embed_queries(args, queries, model, tokenizer, model_name_or_path, cached_em
         cached_embeddings[query] = embedding
 
     if args.get('update_exact_embedding_cache', True):
-        with open(args.get("exact_embedding_cache_path", 'cache'), 'wb') as fout:
+        with open(args.get("exact_embedding_cache_path", "cache.pkl"), 'wb') as fout:
             pkl.dump(cached_embeddings, fout)
 
     return cached_embeddings
@@ -207,12 +207,12 @@ def exact_rerank_topk(cfg):
             results.append(ex)
     
     logging.info(f"Doing exact reranking for {len(results)} total evaluation samples...")
-    if os.path.exists(eval_args.search.get('exact_embedding_cache_path', "cache")):
-        logging.info(f"Loading cached exact embeddings from {eval_args.search.get('exact_embedding_cache_path', 'cache')}")
-        with open(eval_args.search.get('exact_embedding_cache_path', "cache"), 'rb') as fin:
+    if os.path.exists(eval_args.search.get('exact_embedding_cache_path', "cache.pkl")):
+        logging.info(f"Loading cached exact embeddings from {eval_args.search.get('exact_embedding_cache_path', "cache.pkl")}")
+        with open(eval_args.search.get('exact_embedding_cache_path', "cache.pkl"), 'rb') as fin:
             cached_embeddings = pkl.load(fin)
     else:
-        os.makedirs(eval_args.search.get('exact_embedding_cache_path', "cache"), exist_ok=True)
+        os.makedirs(eval_args.search.get('exact_embedding_cache_path', "cache.pkl"), exist_ok=True)
         cached_embeddings = {}
 
     # Get all needed embeddings
