@@ -213,7 +213,7 @@ def exact_rerank_topk(cfg):
         with open(eval_args.search.exact_embedding_cache_path, 'rb') as fin:
             cached_embeddings = pkl.load(fin)
     else:
-        os.makedirs(os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache")), exist_ok=True)
+        os.makedirs(eval_args.search.get('exact_embedding_cache_path', "cache"), exist_ok=True)
         cached_embeddings = {}
 
     # Get all needed embeddings
