@@ -10,7 +10,7 @@ tasks:
     search: false  # search top-k offline
     merge_search: false  # merge searched results from multiple sources
     inference: false  # run inference with LM
-    exact_search: false
+    exact_rerank: false
 
 model:
   sparse_retriever: null  # choices: null, bm25
