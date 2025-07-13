@@ -212,7 +212,8 @@ def exact_rerank_topk(cfg):
         with open(eval_args.search.get('exact_embedding_cache_path', "cache.pkl"), 'rb') as fin:
             cached_embeddings = pkl.load(fin)
     else:
-        if not os.path.exists(os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache.pkl"))):
+        if not os.path.exists(os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache.pkl"))) and \
+           os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache.pkl")) != "":
             logging.info(f"Creating directory for exact embedding cache: {os.path.dirname(eval_args.search.get('exact_embedding_cache_path', 'cache.pkl'))}")
             os.makedirs(os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache.pkl")), exist_ok=True)
         cached_embeddings = {}
