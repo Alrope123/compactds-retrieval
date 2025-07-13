@@ -18,6 +18,8 @@ model:
   query_tokenizer: facebook/contriever-msmarco
   query_encoder: facebook/contriever-msmarco
   datastore_encoder: facebook/contriever-msmarco
+  exact_encoder: facebook/contriever-msmarco
+  exact_tokenizer: facebook/contriever-msmarco
   lm_model: meta-llama/Llama-3.1-8B-Instruct    # LM for evaluation
 
 
@@ -88,6 +90,7 @@ evaluation:
     answer_path: null  # path to load answers for lm-eval
     rerank_n_docs: null  # number of documents used for reranking, set to null if not removing any data
     use_saved_dedup_data: false  # reuse the saved dedupped data for efficient subsampling
+    update_exact_embedding_cache: true  # whether to update the exact embedding cache when doing search
   data:
     eval_data: s3://ai2-llm/pretraining-data/sources/ds-olmo-data/oracle_retrieval/mmlu/out/cot_queries.jsonl
     max_eval_data_seq_length: 1024

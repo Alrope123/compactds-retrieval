@@ -208,11 +208,12 @@ def exact_rerank_topk(cfg):
             results.append(ex)
     
     logging.info(f"Doing exact reranking for {len(results)} total evaluation samples...")
-    if os.path.exists(eval_args.search.get('exact_embedding_cache_path', "")):
+    if os.path.exists(eval_args.search.get('exact_embedding_cache_path', "cache")):
         logging.info(f"Loading cached exact embeddings from {eval_args.search.exact_embedding_cache_path}")
         with open(eval_args.search.exact_embedding_cache_path, 'rb') as fin:
             cached_embeddings = pkl.load(fin)
     else:
+        os.makedirs(os.path.dirname(eval_args.search.get('exact_embedding_cache_path', "cache")), exist_ok=True)
         cached_embeddings = {}
 
     # Get all needed embeddings

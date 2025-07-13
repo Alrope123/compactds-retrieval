@@ -29,11 +29,11 @@ def main(cfg) -> None:
         add_to_index(cfg)
     
     if cfg.tasks.eval.get('search', False):
-        logging.info("\n\n************** Exact Rank ***********")
+        logging.info("\n\n************** Running Search ***********")
         search_topk(cfg)
 
     if cfg.tasks.eval.get('exact_rerank', False):
-        logging.info("\n\n************** Running Search ***********")
+        logging.info("\n\n************** Exact Search ***********")
         exact_rerank_topk(cfg)
     
 
