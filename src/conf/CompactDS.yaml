@@ -19,8 +19,8 @@ model:
   query_tokenizer: facebook/contriever-msmarco
   query_encoder: facebook/contriever-msmarco
   datastore_encoder: facebook/contriever-msmarco
-  exact_encoder: facebook/contriever-msmarco
-  exact_tokenizer: facebook/contriever-msmarco
+  exact_encoder: GritLM/GritLM-7B
+  exact_tokenizer: GritLM/GritLM-7B
   lm_model: meta-llama/Llama-3.1-8B-Instruct    # LM for evaluation
 
 
