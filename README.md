@@ -53,9 +53,20 @@ python -m src.main_ric \
     tasks.eval.search=true \
     datastore.embedding.embedding_dir=datastores/compactds/embeddings \
     datastore.embedding.passages_dir=datastores/compactds/passages \
+    evaluation.data.eval_data=queries/mmlu_pro.jsonl \ 
     tasks.eval.task_name=lm-eval \ # Optional
-    evaluation.data.eval_data=queries/mmlu_pro.jsonl \ # Optional 
-    evaluation.search.n_docs=1000
+    evaluation.search.n_docs=1000 \ # Optional 
+```
+- To run exact search to rerank the top 1000 documents:
+```bash
+python -m src.main_ric \
+    --config-name CompactDS \
+    tasks.eval.exact_rerank=true \
+    datastore.embedding.embedding_dir=datastores/compactds/embeddings \
+    datastore.embedding.passages_dir=datastores/compactds/passages \
+    evaluation.data.eval_data=queries/mmlu_pro.jsonl \ 
+    tasks.eval.task_name=lm-eval \ # Optional
+    evaluation.search.n_docs=1000 \ # Optional 
 ```
 
 ## Custom Index Building
