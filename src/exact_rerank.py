@@ -234,7 +234,7 @@ def exact_rerank_topk(cfg):
         ctxs_embedding = np.vstack([text_to_embeddings[ctx['retrieval text']] for ctx in res['ctxs']])
         similarities = cosine_similarity(query_embedding, ctxs_embedding)
         for ctx, similarity in zip(res['ctxs'], similarities[0]):
-            ctx['exact score'] = float(similarity)
+            ctx['grit score'] = float(similarity)
     
     base_name, ext = os.path.splitext(output_path) 
     new_output_path = base_name + "_exact_searched" + ext
