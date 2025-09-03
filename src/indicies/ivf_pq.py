@@ -51,7 +51,6 @@ class IVFPQIndexer(object):
         self.deprioritized_domains = deprioritized_domains
         self.pos_array_save_path = pos_array_save_path
         self.passage_filenames_save_path = passage_filenames_save_path
-        self.cuda = False
 
         self.sample_size = sample_train_size
         self.sample_path = sample_train_path
