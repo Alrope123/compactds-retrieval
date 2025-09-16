@@ -35,6 +35,7 @@ class FlatIndexer(object):
         self.passage_dir = passage_dir
         self.deprioritized_domains = deprioritized_domains
         self.pos_array_save_path = pos_array_save_path
+        self.passage_filenames_save_path = passage_filenames_save_path
         self.dimension=dimension
         self.save_intermediate_index = save_intermediate_index
         self.cuda = False
@@ -51,6 +52,11 @@ class FlatIndexer(object):
         
         if self.pos_array_save_path is not None:
             self.psg_pos_id_array, self.passage_filenames = self.load_psg_pos_id_array()
+
+    def load_index_id_to_file_id(self,):
+        with open(self.meta_file, "rb") as reader:
+            index_id_to_file_id = np.load(reader)
+        return index_id_to_file_id
 
     def _build_index(self,):
         start_time = time.time()
