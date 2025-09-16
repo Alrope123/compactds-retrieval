@@ -45,6 +45,7 @@ class Indexer(object):
                 pos_array_save_path=pos_array_save_path,
                 passage_filenames_save_path=passage_filenames_save_path,
                 dimension=self.args.projection_size,
+                save_intermediate_index=save_intermediate_index,
             )
         elif self.index_type == "IVFFlat":
             self.datastore = IVFFlatIndexer(
