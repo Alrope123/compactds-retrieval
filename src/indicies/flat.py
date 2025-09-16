@@ -26,6 +26,7 @@ class FlatIndexer(object):
                 pos_array_save_path=None,
                 passage_filenames_save_path=None,
                 dimension=768,
+                save_intermediate_index=False,
                 ):
     
         self.embed_paths = embed_paths
@@ -35,6 +36,7 @@ class FlatIndexer(object):
         self.deprioritized_domains = deprioritized_domains
         self.pos_array_save_path = pos_array_save_path
         self.dimension=dimension
+        self.save_intermediate_index = save_intermediate_index
         self.cuda = False
 
         if os.path.exists(index_path) and os.path.exists(self.meta_file):
